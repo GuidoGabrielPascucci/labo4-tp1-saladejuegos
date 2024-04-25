@@ -9,14 +9,17 @@ import { Component } from '@angular/core';
 })
 export class QuienSoyComponent {
 
+    alumno = {}
 
-
+    alumnos = []
 
     
 
+
+
     /*
 
-        - SUBIR A HOSTING WEB (Heroku o Firebase)
+        - SUBIR A HOSTING WEB (Firebase, Netlify o Heroku)
         - FAVICON
         - Componente de Login.
         - Componente de Home.
