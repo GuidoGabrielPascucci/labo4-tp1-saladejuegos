@@ -1,3 +1,37 @@
-<h1 class="text-center">TP SALA DE JUEGOS</h1>
+<h1 class="text-center my-4">TP SALA DE JUEGOS</h1>
 
-<p>IT WORKS!!</p>
+
+<div class="container">
+    <div class="row border border-2 my-5">
+        <div class="col d-flex flex-column justify-content-center align-items-center my-3 p-3">
+            @if (!isThereData) {
+                <button class="btn btn-primary w-25 p-3" (click)="mostrarLogins()">Mostrar Logins</button>
+            } 
+            @else {
+                <table class="border my-3">
+                    <thead class="border">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (login of loginsCollection; track $index) {
+                            <tr>
+                                <td>{{login["nombre"]}}</td>
+                                <td>{{login["fecha"]}}</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button class="btn btn-primary" (click)="limpiar()">Limpiar</button>
+            }
+        </div>
+        <div class="col d-flex flex-column">
+            Nombre<input type="text">
+            Fecha<input type="text">
+        </div>
+    </div>
+</div>
+
+
