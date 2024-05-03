@@ -1,0 +1,5 @@
+#home-listadojuegos-contenedor {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.353); /* Color blanco con 50% de opacidad */
+}

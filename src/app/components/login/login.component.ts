@@ -18,4 +18,8 @@ export class LoginComponent {
         alert("Hola amigo te has logeado")
     }
 
+    accesoRapido() {
+        alert("Acceso rapido realizado")
+    }
+
 }

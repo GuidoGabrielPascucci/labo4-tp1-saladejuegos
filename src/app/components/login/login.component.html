@@ -1,46 +1,61 @@
-<main class="form-signin w-100 m-auto">
-    <form>
-        <!-- @if (wrong_credentials.state) {
-            <app-sweet-alert [message]="wrong_credentials.message"/>
-        } -->
+<div class="container p-5" id="contenedorPrincipal">
+    <div class="row justify-content-center">
+        <div class="col-5 py-5 border border-3" id="contenedorForm">
+            <form>
+                <!-- @if (wrong_credentials.state) {
+                <app-sweet-alert [message]="wrong_credentials.message"/>
+            } -->
 
-        <!-- <div class="row">
-            <img
-                class="mb-4"
-                src="https://brandemia.org/contenido/subidas/2022/10/marca-mcdonalds-logo.png"
-                alt=""
-                width="600"
-                height="auto">
+                <!-- <div class="row">
+                <img
+                    class="mb-4"
+                    src="https://brandemia.org/contenido/subidas/2022/10/marca-mcdonalds-logo.png"
+                    alt=""
+                    width="600"
+                    height="auto">
+            </div> -->
+
+                <h1 class="h3 mb-3 fw-normal text-center">
+                    Sign in
+                </h1>
+
+                <div class="form-floating my-2">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                        [(ngModel)]="email" name="email">
+                    <label for="floatingInput">
+                        Email address
+                    </label>
+                </div>
+
+                <div class="form-floating my-2">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                        [(ngModel)]="password" name="password">
+                    <label for="floatingPassword">
+                        Password
+                    </label>
+                </div>
+
+                <div class="form-check text-start my-3">
+                    <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault"
+                        [(ngModel)]="remember_me" name="remember-me">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Remember me
+                    </label>
+                </div>
+
+                <button class="btn btn-primary w-100 py-2 my-1" (click)="logearse()">
+                    Sign in
+                </button>
+
+                <button class="btn btn-secondary w-100 py-2 my-1" (click)="accesoRapido()">
+                    Acceso rápido
+                </button>
+                <!-- <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p> -->
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="col-8">
+            <img src="https://images.unsplash.com/photo-1635173250597-00863d9ce454?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de muchos dados cayendo sobre un fondo negro">
         </div> -->
-        <h1 class="h3 mb-3 fw-normal text-center">
-            Please sign in
-        </h1>
-
-        <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
-                [(ngModel)]="email" name="email">
-            <label for="floatingInput">
-                Email address
-            </label>
-        </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
-                [(ngModel)]="password" name="password">
-            <label for="floatingPassword">
-                Password
-            </label>
-        </div>
-
-        <div class="form-check text-start my-3">
-            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault"
-                [(ngModel)]="remember_me" name="remember-me">
-            <label class="form-check-label" for="flexCheckDefault">
-                Remember me
-            </label>
-        </div>
-        <button class="btn btn-primary w-100 py-2" (click)="logearse()">
-            Sign in
-        </button>
-        <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
-    </form>
-</main>

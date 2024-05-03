@@ -1,0 +1,12 @@
+img {
+    width: 95%;
+    height: 350px;
+    object-fit: scale-down;
+    border-radius: 5%;
+}
+
+.card-image:hover {
+    cursor: pointer;
+    opacity: .3;
+    /* background-color: rgb(102, 201, 102); */
+}

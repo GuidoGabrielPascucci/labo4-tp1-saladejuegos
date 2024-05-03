@@ -1,30 +1,47 @@
-<h1 class="text-center my-4">TP SALA DE JUEGOS</h1>
+<!-- <h1 class="text-center p-4">Game Factory</h1> -->
+<section class="p-4">
+    <div class="container w-75">
+        <div class="row row-cols-1 row-cols-xl-2 g-3 p-2 mt-4" id="home-listadojuegos-contenedor">
+            @for (juego of juegosInformacion; track $index) {
+                <div class="col">
+                    <app-tarjeta-juego
+                        [gameTitle]="juego.title"
+                        [gameDescription]="juego.description"
+                        [gameImage]="juego.image"
+                        [gamePath]="juego.gamePath"
+                    />
+                </div>
+            }
+        </div>
+    </div>
+    <!-- <div class="py-5 bg-body-tertiary">
+    </div> -->
+</section>
 
-
-<div class="container">
+<!-- <div class="container">
     <div class="row border border-2 my-5">
         <div class="col d-flex flex-column justify-content-center align-items-center my-3 p-3">
             @if (!isThereData) {
-                <button class="btn btn-primary w-25 p-3" (click)="mostrarLogins()">Mostrar Logins</button>
-            } 
+            <button class="btn btn-primary w-25 p-3" (click)="mostrarLogins()">Mostrar Logins</button>
+            }
             @else {
-                <table class="border my-3">
-                    <thead class="border">
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Fecha</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @for (login of loginsCollection; track $index) {
-                            <tr>
-                                <td>{{login["nombre"]}}</td>
-                                <td>{{login["fecha"]}}</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-                <button class="btn btn-primary" (click)="limpiar()">Limpiar</button>
+            <table class="border my-3">
+                <thead class="border">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (login of loginsCollection; track $index) {
+                    <tr>
+                        <td>{{login["nombre"]}}</td>
+                        <td>{{login["fecha"]}}</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+            <button class="btn btn-primary" (click)="limpiar()">Limpiar</button>
             }
         </div>
         <div class="col d-flex flex-column">
@@ -32,6 +49,10 @@
             Fecha<input type="text">
         </div>
     </div>
-</div>
+</div> -->
 
+<!-- <div class="bg-body-tertiary py-4">
 
+    
+    
+</div> -->
